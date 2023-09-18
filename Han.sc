@@ -15,7 +15,7 @@ object Han {
 
   def getBytes(port: SerialPort) = {
     while (port.bytesAvailable == 0) {
-      Thread.sleep(1000)
+      Thread.sleep(2000)
     }
     val ba = new Array[Byte](port.bytesAvailable)
     port.readBytes(ba, ba.length)
